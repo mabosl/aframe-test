@@ -79,27 +79,89 @@
                 value:Kleinere Texte zeigen, dass vor allem bei groeserer Zeichenmenge, die Lesbarkeit aufgrund der Raumverzerrung immmer schlechter wird. Vor allem bei mehr Zeichen- und Zeilenzuwachs wird der Text zusaetzlich zur Perspektive noch schwerer lesbar.; width:1.2;zOffset:0">
       </a-entity>
       
+      
+      <!-- linker Bereich -->
+     <a-entity position="-2 1.61 -0.285" rotation="-59.99999999999999 50 0" text="color:#000000;font:kelsonsans;
+                      value:Texte auf Objekten, verzerren 
+                      sich entlang der Raumtiefe,
+                      je nachdem wie stark die Position 
+                      des Textes gekippt wird.;width:1.8">
+      </a-entity>
+      
+     <a-entity position="-1.88 1.319 -0.187" rotation="0 50 0" text="color:#000000;font:kelsonsans;
+          value:Wenn der Text ueber eine Kante 
+          hinausgeht, beeinflusst dass die 
+          optische Wirkung von Text, kann 
+          aber auch einen Bruch erzeugen.;
+          width:1.8">
+      </a-entity>
+      
+      <a-entity position="-2.001 0.8850105008455731 0.902" rotation="-70 55 85.142" text="color:#000000;font:kelsonsans;
+      value:Ein kurzer Text \n mit mehreren \nkurzen, kleinen\nZeilen in einem \n anderen Kontext \nzeigt die Option\n die Flaechen zu\n verwinkeln.;width:1.8;anchor:left;baseline:top">
+      </a-entity>
+      
+<a-entity position="-1.507 0.851 0.314" rotation="2.3491269600363753 149.65657608817102 16.615776058793873" text="anchor:left;baseline:top;color:#000000;font:kelsonsans;value:Dieser weitere Text in einer 
+          kleineren Gröeße zeigt wie ein 
+          Winkel auch die Größe beeinflussen
+          kann. Alle diese Texte sind Beispiel-
+          texte mit denen die Veraenderung
+          von Lesbarkeit sehr gut aufzuzeigen ist.">
+      </a-entity>
+      
+      <!-- hinterer Bereich -->
+      <a-entity position="1 2.55 2.61" rotation="0 180 0" text="baseline:top;align:center;color:#000000;font:kelsonsans;side:double;
+        value:D              R              E              I;wrapCount:3;lineHeight:30;height:0.28;width:1;zOffset:0">
+        <a-animation attribute="rotation" 
+                     easing="linear"
+                     dur="5000" 
+                     fill="none" 
+                     to="0 540 0"
+                     repeat="indefinite"></a-animation>
+      </a-entity>
+      
+            <a-entity position="0 3.16 2.61" rotation="0 180 0" text="baseline:top;align:center;color:#000000;font:kelsonsans;side:double;
+        value:G              R              O              S              S              E;wrapCount:3;lineHeight:30;height:0.28;width:1;zOffset:0">
+        <a-animation attribute="rotation" 
+                     easing="linear"
+                     dur="3400" 
+                     fill="none" 
+                     to="0 540 0"
+                     repeat="indefinite"></a-animation>
+      </a-entity>
+      
+        <a-entity position="-1 3.9 2.61" rotation="0 180 0" text="baseline:top;align:center;color:#000000;font:kelsonsans;side:double;
+        value:S              A              E              U              L              E              N;wrapCount:3;lineHeight:30;height:0.28;width:1;zOffset:0">
+        <a-animation attribute="rotation" 
+                     easing="linear"
+                     dur="7000" 
+                     fill="none" 
+                     to="0 540 0"
+                     repeat="indefinite"></a-animation>
+      </a-entity>
+      
+      
 
       <!-- Himmel -->
       <a-sky color="#ffffff"></a-sky>
       
       <!-- Boden -->
-      <a-plane rotation="-90 0 0" width="2" height="2" position="0 0 0" color= "#aaaaaa"
-               text="baseline: bottom; anchor: center; align: center; font: kelsonsans; color: black; 
+      <a-plane rotation="-90 0 0" width="3" height="3" position="0 0 0" color= "#aaaaaa"
+               text="baseline: center; anchor: center; align: center; font: kelsonsans; color: black; 
                      width: 1.5; 
                      value:
-                     Schau in die Richtungen 
-                     der Pfeile und sieh mehr.">
+                     Schau in die 
+                     Richtungen der Pfeile 
+                     und sieh mehr.">
       </a-plane>
       
       <!-- Pfeile -->
-      <a-image src="#pfeil" rotation="90 180 0" position="0 0.01 -0.6" width="0.5" height="0.5">
+      <a-image src="#pfeil" rotation="90 180 0" position="0 0.01 -1" width="0.5" height="0.5">
       </a-image>
-      <a-image src="#pfeil" rotation="90 90 0" position="0.6 0.01 0" width="0.5" height="0.5">
+      <a-image src="#pfeil" rotation="90 90 0" position="1 0.01 0" width="0.5" height="0.5">
       </a-image>
-      <a-image src="#pfeil" rotation="90 -90 0" position="-0.6 0.01 0" width="0.5" height="0.5">
+      <a-image src="#pfeil" rotation="90 -90 0" position="-1 0.01 0" width="0.5" height="0.5">
       </a-image>
-      <a-image src="#pfeil" rotation="90 0 0" position="0 0.01 0.6" width="0.5" height="0.5">
+      <a-image src="#pfeil" rotation="90 0 0" position="0 0.01 1" width="0.5" height="0.5">
       </a-image>
       
 
