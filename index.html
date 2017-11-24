@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, WebVR! - A-Frame</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://rawgit.com/aframevr/aframe/c9817f2/dist/aframe-master.min.js"></script>
+  </head>
+  <body>
+    
+    <a-scene>
+      
+      <a-assets>
+         <a-mixin
+          id="marker"
+          geometry="primitive: plane; width: 0.02; height: 0.02"
+          material="color: red"
+        ></a-mixin>
+        
+        <img id="pfeil" src="https://cdn.glitch.com/10eea4e6-3a3b-4475-a29b-aeb16b714421%2Fpfeil.png?1511454844286">
+        
+      </a-assets>
+    
+
+      <!-- Spacing. -->
+      <!-- a-entity mixin="marker" position="-1 2.5 0.01"></a-entity -->
+      <a-entity position="-1 2 -2"
+                text="width: 2; 
+                color: #000000; 
+                anchor: center; baseline: top; font: kelsonsans;
+                value: Jeder dieser drei Texte hat \ngenau den gleichen Inhalt.\nDie Textgroesse ist in jedem \nder Felderauch die gleiche.
+                        Durch die unterschiedlichen\nTiefen im Raum ergibt sich \n aber eine andere Lesbarkeit.">
+      </a-entity>
+      
+            <a-entity position="0.5 2 -2.5"
+                text="width: 2; 
+                color: #000000; 
+                anchor: center; baseline: top; font: kelsonsans;
+                value: Jeder dieser drei Texte hat \ngenau den gleichen Inhalt.\nDie Textgroesse ist in jedem \nder Felderauch die gleiche.
+                        Durch die unterschiedlichen\nTiefen im Raum ergibt sich \n aber eine andere Lesbarkeit.">
+      </a-entity>
+      
+      <a-entity id="textrechts"
+                position="2.5 2 -3"
+                text="width: 2; 
+                color: #000000; 
+                anchor: center; baseline: top; font: kelsonsans;
+                value: Jeder dieser drei Texte hat \ngenau den gleichen Inhalt.\nDie Textgroesse ist in jedem \nder Felderauch die gleiche.
+                        Durch die unterschiedlichen\nTiefen im Raum ergibt sich \n aber eine andere Lesbarkeit.">
+      </a-entity>
+      
+       <!-- rechter Bereich -->
+            <a-entity 
+                position="2.5 1.6 -0.5"
+                rotation="0 -30 0"
+                text="width: 2; 
+                color: #000000; 
+                anchor: center; baseline: center; font: kelsonsans;
+                value: Ein Text der schraeg steht \n verzerrt sich staerker oder \nschwaecher je nach Winkel.">
+      </a-entity>
+      
+      <a-entity 
+                position="1.9 1.6 0.8"
+                rotation="0 -135 0"
+                text="width: 2; 
+                color: #000000; 
+                anchor: center; baseline: center; font: kelsonsans;
+                value: Ein Text der schraeg steht \n verzerrt sich staerker oder \nschwaecher je nach Winkel.">
+      </a-entity>
+      
+      <a-entity position="1.75 1 -1" 
+                rotation="0 -29.999999999999996 0" 
+                text="anchor:left; baseline:top; color:#000000;
+                font:kelsonsans; value:Kleinere Texte zeigen, dass vor allem bei groeserer Zeichenmenge, die Lesbarkeit aufgrund der Raumverzerrung immmer schlechter wird. Vor allem bei mehr Zeichen- und Zeilenzuwachs wird der Text zusaetzlich zur Perspektive noch schwerer lesbar.;width:1.2">
+      </a-entity>
+      
+      <a-entity position="2.6 1 0.1" 
+                rotation="0 -135 0" 
+                text="anchor:left;baseline:top; color:#000000; font: kelsonsans;
+                value:Kleinere Texte zeigen, dass vor allem bei groeserer Zeichenmenge, die Lesbarkeit aufgrund der Raumverzerrung immmer schlechter wird. Vor allem bei mehr Zeichen- und Zeilenzuwachs wird der Text zusaetzlich zur Perspektive noch schwerer lesbar.; width:1.2;zOffset:0">
+      </a-entity>
+      
+
+      <!-- Himmel -->
+      <a-sky color="#ffffff"></a-sky>
+      
+      <!-- Boden -->
+      <a-plane rotation="-90 0 0" width="2" height="2" position="0 0 0" color= "#aaaaaa"
+               text="baseline: bottom; anchor: center; align: center; font: kelsonsans; color: black; 
+                     width: 1.5; 
+                     value:
+                     Schau in die Richtungen 
+                     der Pfeile und sieh mehr.">
+      </a-plane>
+      
+      <!-- Pfeile -->
+      <a-image src="#pfeil" rotation="90 180 0" position="0 0.01 -0.6" width="0.5" height="0.5">
+      </a-image>
+      <a-image src="#pfeil" rotation="90 90 0" position="0.6 0.01 0" width="0.5" height="0.5">
+      </a-image>
+      <a-image src="#pfeil" rotation="90 -90 0" position="-0.6 0.01 0" width="0.5" height="0.5">
+      </a-image>
+      <a-image src="#pfeil" rotation="90 0 0" position="0 0.01 0.6" width="0.5" height="0.5">
+      </a-image>
+      
+
+         <a-entity position="0 1.65 0">
+        <a-entity camera look-controls wasd-controls></a-entity>
+      </a-entity>
+      
+      
+    </a-scene>
+  </body>
+</html>
